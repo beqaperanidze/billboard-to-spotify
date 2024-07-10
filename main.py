@@ -21,10 +21,14 @@ wb_link = response.text
 soup = BeautifulSoup(wb_link, "html.parser")
 
 song = soup.find("h3", id="title-of-a-story",
-                 class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 u-font-size-23@tablet lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-245 u-max-width-230@tablet-only u-letter-spacing-0028@tablet")
+                 class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 u-font-size-23@tablet "
+                        "lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis "
+                        "u-max-width-245 u-max-width-230@tablet-only u-letter-spacing-0028@tablet")
 songs = soup.findAll("h3", id="title-of-a-story",
-                     class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 lrv-u-font-size-18@tablet lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-330 u-max-width-230@tablet-only")
-
+                     class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 "
+                            "lrv-u-font-size-18@tablet lrv-u-font-size-16 u-line-height-125 "
+                            "u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-330 "
+                            "u-max-width-230@tablet-only")
 
 final_list = [song.getText().strip()]
 for song in songs:
