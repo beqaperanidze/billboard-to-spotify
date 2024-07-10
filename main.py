@@ -25,6 +25,7 @@ song = soup.find("h3", id="title-of-a-story",
 songs = soup.findAll("h3", id="title-of-a-story",
                      class_="c-title a-no-trucate a-font-primary-bold-s u-letter-spacing-0021 lrv-u-font-size-18@tablet lrv-u-font-size-16 u-line-height-125 u-line-height-normal@mobile-max a-truncate-ellipsis u-max-width-330 u-max-width-230@tablet-only")
 
+
 final_list = [song.getText().strip()]
 for song in songs:
     final_list.append(song.getText().strip())
